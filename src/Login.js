@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Card} from 'material-ui/Card';
+import { Link } from 'react-router-dom'
 
 import './Login.css';
 
@@ -16,9 +17,9 @@ class Login extends Component {
           </div>
           <div className="subtitle">
             New to FreightHub? 
-            <a style={{color: "#00A5F5"}}>
+            <Link style={{color: "#00A5F5"}} to="/signup">
               Sign Up
-            </a>
+            </Link>
           </div>
           <div>
             <TextField

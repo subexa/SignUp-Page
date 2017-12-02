@@ -212,22 +212,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Link to="/">
-            <Login />
-          </Link>
-          <Link to="/signup">
-            <SignUp 
-              getFirstName={this.getFirstName}
-              getLastName={this.getLastName}
-              setInputPassword={this.setInputPassword}
-              emailAddress={this.state.emailAddress}
-              getEmailAddress={this.getEmailAddress}
-              confirmPassword={this.confirmPassword}
-              checkDetails={this.checkDetails}
-              errorMessage={this.state.errorMessage}
-              invalidEmailError={this.state.invalidEmailError}
-            />
-          </Link>
           <Route exact={true} path="/" component={Login} />
           <Route path="/signup" component={SignUp} />
         </div>
