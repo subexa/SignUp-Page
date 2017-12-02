@@ -15,7 +15,10 @@ class Login extends Component {
             Log in to FreightHub
           </div>
           <div className="subtitle">
-            New to FreightHub? <a href="./SignUp" style={{color: "#00A5F5"}}> Sign Up </a>
+            New to FreightHub? 
+            <a style={{color: "#00A5F5"}}>
+              Sign Up
+            </a>
           </div>
           <div>
             <TextField

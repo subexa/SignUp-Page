@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
 import Login from './Login';
 import SignUp from './SignUp';
@@ -205,20 +210,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {/*<Login />*/}
-        <SignUp 
-          getFirstName={this.getFirstName}
-          getLastName={this.getLastName}
-          setInputPassword={this.setInputPassword}
-          emailAddress={this.state.emailAddress}
-          getEmailAddress={this.getEmailAddress}
-          confirmPassword={this.confirmPassword}
-          checkDetails={this.checkDetails}
-          errorMessage={this.state.errorMessage}
-          invalidEmailError={this.state.invalidEmailError}
-        />
-      </div>
+      <Router>
+        <div className="App">
+          <Link to="/">
+            <Login />
+          </Link>
+          <Link to="/signup">
+            <SignUp 
+              getFirstName={this.getFirstName}
+              getLastName={this.getLastName}
+              setInputPassword={this.setInputPassword}
+              emailAddress={this.state.emailAddress}
+              getEmailAddress={this.getEmailAddress}
+              confirmPassword={this.confirmPassword}
+              checkDetails={this.checkDetails}
+              errorMessage={this.state.errorMessage}
+              invalidEmailError={this.state.invalidEmailError}
+            />
+          </Link>
+          <Route exact={true} path="/" component={Login} />
+          <Route path="/signup" component={SignUp} />
+        </div>
+      </Router>
     );
   }
 }

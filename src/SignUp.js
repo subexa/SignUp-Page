@@ -7,7 +7,6 @@ import './SignUp.css';
 
 class SignUp extends Component {
   render() {
-  console.log(this.props.getFirstName)
   const errorMessage = this.props.errorMessage;
   const invalidEmailError = this.props.invalidEmailError;
     return(
